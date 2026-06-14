@@ -25,11 +25,12 @@ jobs:
             - name: Setup Node
               uses: actions/setup-node@v4
               with:
-                  node-version: 20
+                  node-version: 22
                   cache: npm
 
             - name: Install dependencies
-              run: npm ci
+              # 💡package-lock.jsonが無くても、自動で判断して確実にインストールする安全なコマンドに変更
+              run: npm install
 
             - name: Build Astro
               run: npm run build
