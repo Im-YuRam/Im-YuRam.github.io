@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 interface Props {
     rotate: number;
@@ -11,33 +11,36 @@ interface Props {
 const { rotate, url, potision, mage } = Astro.props;
 
 const PotisionClasses = {
-  left: 'justify-start',
-  middle: 'justify-center',
-  right: 'justify-end'
+    left: "justify-start",
+    middle: "justify-center",
+    right: "justify-end",
 };
 
 // --- 【ここからランダム位置のロジック】 ---
 let randomX = 0;
 
 if (potision === "middle") {
-  // Math.random() は 0〜1 未満のランダムな数を返します
-  // これを使って -50 から +50 の間の数値を計算します
-  randomX = Math.floor(Math.random() * 150) - 50; 
+    // Math.random() は 0〜1 未満のランダムな数を返します
+    // これを使って -50 から +50 の間の数値を計算します
+    randomX = Math.floor(Math.random() * 150) - 50;
 }
 
-
-const cardStyle = { 
-  transform: `rotate(${rotate}deg) translateX(${randomX}px)` 
+const cardStyle = {
+    transform: `rotate(${rotate}deg) translateX(${randomX}px)`,
 };
 // ------------------------------------------
 ---
 
 <div class={`w-full min-w-full flex items-center ${PotisionClasses[potision]}`}>
-    <a href={url} class="block w-[calc(1500/1920*100%)] transition-transform duration-300 hover:scale-[1.02]">
+    <a
+        href={url}
+        class="block w-[calc(1500/1920*100%)] transition-transform duration-300 hover:scale-[1.02]"
+    >
         <Image
             src={mage}
             alt=""
-            style={cardStyle} class="w-full h-auto object-contain"
+            style={cardStyle}
+            class="w-full h-auto object-contain"
         />
     </a>
 </div>
