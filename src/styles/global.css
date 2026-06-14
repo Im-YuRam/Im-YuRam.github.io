@@ -22,7 +22,7 @@
 @utility bg-tile {
   background-image: url('/Background.svg');
   background-repeat: repeat;
-  background-size: 100px 100px;
+  background-size: 7.8125vw 7.8125vw; /*1920+1080あたり150px分*/
 }
 /*付箋用*/
 @keyframes tape-peel {
