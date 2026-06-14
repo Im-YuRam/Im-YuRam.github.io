@@ -101,7 +101,7 @@ export default function SkillAccordionSequenced({ openTapeUrl, closeTapeUrl, chi
           <div className="pb-[calc(48/1920*100vw)] w-full flex justify-center px-[calc(798/1920*100vw)]">
             <button
               onClick={handleClose}
-              className="transition-transform hover:scale-105 active:scale-95 cursor-pointer"
+              className="w-full transition-transform hover:scale-105 active:scale-95 cursor-pointer"
             >
               <img src={closeTapeUrl} alt="閉じる" className="object-contain w-full h-auto" />
             </button>
