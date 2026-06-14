@@ -1,65 +1,89 @@
 ---
 import { Image } from "astro:assets";
 
-import SkillsTape from "../../assets/Skills/SkillsTape.svg"
-import SkillsTape2 from "../../assets/Skills/SkillsTape2.svg"
-import SkillsTitle from "../../assets/Skills/SkillsTitle.svg"
-import SkillsAccordion from "../../components/react/SkillsAccordion.tsx"
-const images = import.meta.glob<{ default: ImageMetadata }>("../../assets/Skills/SkillsIcon/Skills*.svg", { eager: true });
+import SkillsTape from "../../assets/Skills/SkillsTape.svg";
+import SkillsTape2 from "../../assets/Skills/SkillsTape2.svg";
+import SkillsTitle from "../../assets/Skills/SkillsTitle.svg";
+import SkillsAccordion from "../../components/react/SkillsAccordion.tsx";
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "../../assets/Skills/SkillsIcon/Skills*.svg",
+    { eager: true },
+);
 
 const mySkillOrder = [
-  "SkillsPython",
-  "SkillsFigma",
-  "Skillsillustrator",
-  "SkillsHuggingFace",
-  "SkillsHTML"
+    "SkillsPython",
+    "SkillsFigma",
+    "Skillsillustrator",
+    "SkillsHuggingFace",
+    "SkillsHTML",
 ];
 
 const mySkillAccordionOrder = [
-  "SkillsAstro",
-  "SkillsMySQL",
-  "SkillsPhotoshop",
-  "SkillsBlender",
-  "SkillsCSS",
-  "SkillsFlask",
-  "SkillsNumpy",
-  "SkillsOBS",
-  "SkillsPandas",
-  "SkillsPytorch",
-  "SkillsReact",
-  "SkillsUnity",
-  "SkillsTensorFlow",
-  "SkillsTailwindcss",
-  "SkillsPremirePro",
-  "SkillsDocker"
+    "SkillsAstro",
+    "SkillsMySQL",
+    "SkillsPhotoshop",
+    "SkillsBlender",
+    "SkillsCSS",
+    "SkillsFlask",
+    "SkillsNumpy",
+    "SkillsOBS",
+    "SkillsPandas",
+    "SkillsPytorch",
+    "SkillsReact",
+    "SkillsUnity",
+    "SkillsTensorFlow",
+    "SkillsTailwindcss",
+    "SkillsPremirePro",
+    "SkillsDocker",
 ];
-
 ---
-<section class="w-full py-[calc(100/1920*100vw)]  flex justify-center items-center flex-col">
-    <div class="w-full gap-[calc(100/1920*100vw)] flex justify-center items-center flex-col">
+
+<section
+    class="w-full py-[calc(100/1920*100vw)] flex justify-center items-center flex-col"
+>
+    <div
+        class="w-full gap-[calc(100/1920*100vw)] flex justify-center items-center flex-col"
+    >
         <Image
             src={SkillsTitle}
             alt=""
-            class="px-[calc(800/1920*100vw)] w-full"/>
-        <div class="w-full gap-[calc(80/1920*100vw)] px-[calc(258/1920*100vw)] flex justify-center items-center flex-col">
-            {mySkillOrder.map((fileName) => {
-                // キーから対象の画像データを引っ張り出す
-                const targetImage = images[`../../assets/Skills/SkillsIcon/${fileName}.svg`]?.default;
-                return targetImage ? <Image src={targetImage} alt="" /> : null;
-            })}
+            class="px-[calc(800/1920*100vw)] w-full"
+        />
+        <div
+            class="w-full gap-[calc(80/1920*100vw)] px-[calc(258/1920*100vw)] flex justify-center items-center flex-col"
+        >
+            {
+                mySkillOrder.map((fileName) => {
+                    // キーから対象の画像データを引っ張り出す
+                    const targetImage =
+                        images[`../../assets/Skills/SkillsIcon/${fileName}.svg`]
+                            ?.default;
+                    return targetImage ? (
+                        <Image src={targetImage} alt="" w-full />
+                    ) : null;
+                })
+            }
         </div>
     </div>
-    <SkillsAccordion 
-      client:load 
-      openTapeUrl={SkillsTape.src}
-      closeTapeUrl={SkillsTape2.src}
+    <SkillsAccordion
+        client:load
+        openTapeUrl={SkillsTape.src}
+        closeTapeUrl={SkillsTape2.src}
     >
-        <div class="w-full gap-[calc(80/1920*100vw)] flex justify-center items-center flex-col">
-            {mySkillAccordionOrder.map((fileName) => {
-                // キーから対象の画像データを引っ張り出す
-                const targetImage = images[`../../assets/Skills/SkillsIcon/${fileName}.svg`]?.default;
-                return targetImage ? <Image src={targetImage} alt="" /> : null;
-            })}
+        <div
+            class="w-full gap-[calc(80/1920*100vw)] flex justify-center items-center flex-col"
+        >
+            {
+                mySkillAccordionOrder.map((fileName) => {
+                    // キーから対象の画像データを引っ張り出す
+                    const targetImage =
+                        images[`../../assets/Skills/SkillsIcon/${fileName}.svg`]
+                            ?.default;
+                    return targetImage ? (
+                        <Image src={targetImage} alt="" class="w-full" />
+                    ) : null;
+                })
+            }
         </div>
     </SkillsAccordion>
 </section>
