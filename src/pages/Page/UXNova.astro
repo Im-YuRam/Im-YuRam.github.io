@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import PageLayout from "../../layouts/PageLayout.astro";
+import PageUXNovaFV from "../../assets/Page/UXNova/UXNovaFV.svg";
+import PageUXNovaFrame from "../../assets/Page/UXNova/UXNovaFrame.svg";
+---
+
+<PageLayout>
+    <section
+        class="pb-[calc(120/1920*100vw)] w-full flex justify-center items-center flex-col gap-[calc(10/1920*100vw)]"
+    >
+        <div
+            class="w-full px-[calc(156/1920*100vw)] pt-[calc(200/1920*100vw)] pb-[calc(102/1920*100vw)] flex justify-center items-center"
+        >
+            <Image src={PageUXNovaFV} alt="" />
+        </div>
+        <div
+            class="w-full px-[calc(258/1920*100vw)] flex justify-center items-center"
+        >
+            <Image src={PageUXNovaFrame} alt="" />
+        </div>
+    </section>
+</PageLayout>

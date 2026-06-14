@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import PageLayout from "../../layouts/PageLayout.astro";
+import PageKachitenFV from "../../assets/Page/Kachiten/KachitenFV.svg";
+import PageKachitenText from "../../assets/Page/Kachiten/KachitenText.svg";
+import PageKachitenTitleText from "../../assets/Page/Kachiten/KachitenTitleText.svg";
+
+import Kachiten2025 from "../../components/sections/Pages/Kachiten/Kachiten2025.astro";
+import Kachiten2026 from "../../components/sections/Pages/Kachiten/Kachiten2026.astro";
+import PageKachitenTitleText2027 from "../../assets/Page/Kachiten/KachitenTitleText2027.svg";
+import PageKachitenComing2027 from "../../assets/Page/Kachiten/KachitenComing2027.svg";
+---
+
+<PageLayout>
+    <section
+        class="pb-[calc(120/1920*100vw)] w-full flex justify-center items-center flex-col gap-[calc(10/1920*100vw)]"
+    >
+        <div
+            class="w-full px-[calc(156/1920*100vw)] pt-[calc(200/1920*100vw)] pb-[calc(102/1920*100vw)] flex justify-center items-center"
+        >
+            <Image src={PageKachitenFV} alt="" />
+        </div>
+        <div
+            class="w-full px-[calc(258/1920*100vw)] flex justify-center items-center flex-col gap-[calc(80/1920*100vw)]"
+        >
+            <Image src={PageKachitenText} alt="" />
+            <div
+                class="w-full flex flex-col justify-center items-center gap-[calc(120/1920*100vw)]"
+            >
+                <Image src={PageKachitenTitleText} alt="" />
+                <div
+                    class="w-full flex flex-col justify-center items-center gap-[calc(240/1920*100vw)]"
+                >
+                    <Kachiten2025 />
+                    <Kachiten2026 />
+                    <div
+                        class="w-full flex flex-col justify-center items-center gap-[calc(40/1920*100vw)]"
+                    >
+                        <Image src={PageKachitenTitleText2027} alt="" />
+                        <Image src={PageKachitenComing2027} alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</PageLayout>

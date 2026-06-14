@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import ProjectTitle from "../../assets/Project/ProjectTitle.svg";
+import ProjectCard from "../ui/ProjectCard.astro";
+import ProjectLoni from "../../assets/Project/ProjectLoni.svg";
+import ProjectKachiten from "../../assets/Project/ProjectKachiten.svg";
+import ProjectKenkyuu from "../../assets/Project/ProjectKenkyuu.svg";
+import ProjectPortfolio from "../../assets/Project/ProjectPortfolio.svg";
+import ProjectUXNova from "../../assets/Project/ProjectUXNova.svg";
+import ProjectRiyoukun from "../../assets/Project/ProjectRiyoukun.svg";
+---
+
+<section
+    class="w-full py-[calc(100/1920*100vw)] flex justify-center items-center flex-col"
+>
+    <div
+        class="w-full flex justify-center items-center flex-col gap-[calc(80/1920*100vw)]"
+    >
+        <div class="px-[calc(760/1920*100vw)]">
+            <Image src={ProjectTitle} alt="" />
+        </div>
+
+        <div class="flex flex-col gap-20 px-[calc(258/1920*100vw)]">
+            <ProjectCard
+                url="/Page/Portfolio"
+                mage={ProjectPortfolio}
+                potision="left"
+                rotate={5}
+            />
+            <ProjectCard
+                url="/Page/Kachiten"
+                mage={ProjectKachiten}
+                potision="right"
+                rotate={-5}
+            />
+
+            <ProjectCard
+                url="/Page/Loni"
+                mage={ProjectLoni}
+                potision="left"
+                rotate={2}
+            />
+            <ProjectCard
+                url="/Page/Kenkyuu"
+                mage={ProjectKenkyuu}
+                potision="right"
+                rotate={-3}
+            />
+            <ProjectCard
+                url="/Page/UXNova"
+                mage={ProjectUXNova}
+                potision="middle"
+                rotate={1}
+            />
+            <ProjectCard
+                url="/Page/Riyou"
+                mage={ProjectRiyoukun}
+                potision="middle"
+                rotate={-1}
+            />
+        </div>
+    </div>
+</section>

@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import PageLayout from "../../layouts/PageLayout.astro";
+import PagePortfolioFV from "../../assets/Page/Portfolio/PortfolioFV.svg";
+import PagePortfolioText from "../../assets/Page/Portfolio/PortfolioText.svg";
+import PagePortfolioRerease from "../../assets/Page/Portfolio/PortfolioRerease.svg";
+import PagePortfolio610 from "../../assets/Page/Portfolio/Portfolio610.svg";
+---
+
+<PageLayout>
+    <section
+        class="pb-[calc(120/1920*100vw)] w-full flex justify-center items-center flex-col gap-[calc(10/1920*100vw)]"
+    >
+        <div
+            class="w-full px-[calc(156/1920*100vw)] pt-[calc(200/1920*100vw)] pb-[calc(102/1920*100vw)] flex justify-center items-center"
+        >
+            <Image src={PagePortfolioFV} alt="" />
+        </div>
+        <div
+            class="w-full px-[calc(258/1920*100vw)] flex justify-center flex-col items-center gap-[calc(80/1920*100vw)]"
+        >
+            <Image src={PagePortfolioText} alt="" />
+            <div
+                class="w-full flex justify-center items-center flex-col gap-[calc(120/1920*100vw)]"
+            >
+                <Image src={PagePortfolioRerease} alt="" />
+                <Image src={PagePortfolio610} alt="" />
+            </div>
+        </div>
+    </section>
+</PageLayout>

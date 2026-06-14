@@ -1,0 +1,47 @@
+---
+// src/components/sections/FirstView.astro
+import { Image } from "astro:assets";
+import FirstViewImage from "../../assets/FV/FV-ver2.svg";
+---
+
+<section class="w-full pl-[calc(501/1920*100vw)] pr-[calc(476/1920*100vw)] py-[calc(456/1920*100vw)] pt-[calc(376/1920*100vw)] flex justify-center items-center flex-col">
+    
+    <Image
+        src={FirstViewImage}
+        alt="Portfolio First View"
+        class="w-full h-auto object-contain pencil-draw-effect"
+    />
+
+</section>
+<style>
+  /* 左上から右下へ引きずるためのアニメーションの定義 */
+  @keyframes pencil-scratch {
+    0% {
+      /* 最初は画面の左上の外側に完全に隠す */
+      mask-position: 100% 100%;
+    }
+    100% {
+      /* 1.5秒かけて移動し、最終的に全体が「見えるエリア」に完全に覆われる位置でピタッと止める */
+      mask-position: 0% 0%;
+    }
+  }
+
+  .pencil-draw-effect {
+    /* 135deg（左上から右下）の向きを活かしたまま、
+      移動した後に「全体が見える状態」を確実にキープできるように、
+      透明（rgba 0）から不透明（rgba 1）へのグラデーション配分を反転・調整しました。
+    */
+    mask-image: linear-gradient(
+      135deg, 
+      rgba(0, 0, 0, 1) 0%, 
+      rgba(0, 0, 0, 1) 50%, 
+      rgba(0, 0, 0, 0) 70%, 
+      rgba(0, 0, 0, 0) 100%
+    );
+    mask-size: 300% 300%; /* 動かすための十分な余白 */
+    mask-repeat: no-repeat;
+    
+    /* 1.5秒かけて実行。forwards がついているので、100%の「完全表示」の状態でピタッと止まります */
+    animation: pencil-scratch 5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+</style>

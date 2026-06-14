@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+import PageKachitenTitleText2025 from "../../../../assets/Page/Kachiten/KachitenTitleText2025.svg";
+import PageKachitenWebPhoto2025 from "../../../../assets/Page/Kachiten/KachitenWebPhoto2025.svg";
+import PageKachitenWebPhotoText2025 from "../../../../assets/Page/Kachiten/KachitenWebPhotoText2025.svg";
+import PageKachitenPhoto2025 from "../../../../assets/Page/Kachiten/KachitenPhoto2025.svg";
+import PageKachitenPhotoText2025 from "../../../../assets/Page/Kachiten/KachitenPhotoText2025.svg";
+import TapeYellow from "../../../../assets/Tape/TapeYellow.svg";
+---
+
+<section
+    class="w-full flex flex-col justify-center items-center gap-[calc(40/1920*100vw)]"
+>
+    <Image src={PageKachitenTitleText2025} alt="" />
+    <div
+        class="w-full flex justify-center items-center flex-col gap-[calc(160/1920*100vw)]"
+    >
+        <div class="w-full flex justify-between items-center flex-row">
+            <div class="relative w-auto">
+                <a
+                    href="https://kachiten.studio.site/2025/top"
+                    class="block w-full transition-transform duration-300 hover:scale-[1.02]"
+                >
+                    <Image
+                        src={PageKachitenWebPhoto2025}
+                        alt=""
+                        class="w-[calc(825/1920*100vw)] rotate-1"
+                    />
+                </a>
+                <Image
+                    src={TapeYellow}
+                    alt=""
+                    class="absolite absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(268/1920*100vw)] rotate-5"
+                />
+            </div>
+            <Image
+                src={PageKachitenWebPhotoText2025}
+                alt=""
+                class="w-[calc(540/1920*100vw)]"
+            />
+        </div>
+        <div class="flex w-full justify-between items-center flex-row">
+            <Image
+                src={PageKachitenPhotoText2025}
+                alt=""
+                class="w-[calc(540/1920*100vw)]"
+            />
+            <div class="relative w-auto">
+                <a
+                    href="https://www.youtube.com/live/IKeHQUOxhLI?si=xbe1rD7SKZFr2TUy"
+                    class="block w-full transition-transform duration-300 hover:scale-[1.02]"
+                >
+                    <Image
+                        src={PageKachitenPhoto2025}
+                        alt=""
+                        class="w-[calc(825/1920*100vw)]"
+                    />
+                </a>
+                <Image
+                    src={TapeYellow}
+                    alt=""
+                    class="absolite absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(268/1920*100vw)] -rotate-5"
+                />
+            </div>
+        </div>
+    </div>
+</section>

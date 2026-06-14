@@ -1,0 +1,110 @@
+---
+import { Image } from "astro:assets";
+import PageLayout from "../../layouts/PageLayout.astro";
+import PageLoniFV from "../../assets/Page/Loni/LoniFV.svg";
+import PageLoniText from "../../assets/Page/Loni/LoniText.svg";
+import PageLoniPhoto1Text from "../../assets/Page/Loni/LoniPhoto1Text.svg";
+import PageLoniPhoto1 from "../../assets/Page/Loni/LoniPhoto1.svg";
+import PageLoniPhoto2Text from "../../assets/Page/Loni/LoniPhoto2Text.svg";
+import PageLoniPhoto2 from "../../assets/Page/Loni/LoniPhoto2.svg";
+import PageLoniPhoto3Text from "../../assets/Page/Loni/LoniPhoto3Text.svg";
+import PageLoniPhoto3 from "../../assets/Page/Loni/LoniPhoto3.svg";
+import TapeYellow from "../../assets/Tape/TapeYellow.svg";
+---
+
+<PageLayout>
+    <section
+        class="pb-[calc(120/1920*100vw)] w-full flex justify-center items-center flex-col gap-[calc(10/1920*100vw)]"
+    >
+        <div
+            class="w-full px-[calc(156/1920*100vw)] pt-[calc(200/1920*100vw)] pb-[calc(102/1920*100vw)] flex justify-center items-center"
+        >
+            <Image src={PageLoniFV} alt="" />
+        </div>
+        <div
+            class="w-full px-[calc(258/1920*100vw)] flex justify-center items-center flex-col gap-[calc(80/1920*100vw)]"
+        >
+            <Image src={PageLoniText} alt="" />
+            <div
+                class="w-full flex justify-center items-center flex-col gap-[calc(160/1920*100vw)]"
+            >
+                <div class="w-full flex justify-between items-center flex-row">
+                    <div class="relative w-auto">
+                        <a
+                            href="https://www.loni.jp/d#feature"
+                            class="block w-full transition-transform duration-300 hover:scale-[1.02]"
+                        >
+                            <Image
+                                src={PageLoniPhoto1}
+                                alt=""
+                                class="w-[calc(825/1920*100vw)]"
+                            />
+                        </a>
+                        <Image
+                            src={TapeYellow}
+                            alt=""
+                            class="absolite absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(268/1920*100vw)] rotate-5"
+                        />
+                    </div>
+                    <Image
+                        src={PageLoniPhoto1Text}
+                        alt=""
+                        class="w-[calc(540/1920*100vw)]"
+                    />
+                </div>
+                <div
+                    class="flex w-full justify-between items-center gap-[calc(40/1920*100vw) flex-row"
+                >
+                    <Image
+                        src={PageLoniPhoto2Text}
+                        alt=""
+                        class="w-[calc(540/1920*100vw)]"
+                    />
+                    <div class="relative w-auto">
+                        <a
+                            href="https://www.loni.jp/d#faq"
+                            class="block w-full transition-transform duration-300 hover:scale-[1.02]"
+                        >
+                            <Image
+                                src={PageLoniPhoto2}
+                                alt=""
+                                class="w-[calc(825/1920*100vw)]"
+                            />
+                        </a>
+                        <Image
+                            src={TapeYellow}
+                            alt=""
+                            class="absolite absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(268/1920*100vw)] -rotate-5"
+                        />
+                    </div>
+                </div>
+                <div
+                    class="flex w-full justify-between items-center gap-[calc(40/1920*100vw)] flex-row"
+                >
+                    <div class="relative w-auto">
+                        <a
+                            href="https://www.loni.jp/d#flow"
+                            class="block w-full transition-transform duration-300 hover:scale-[1.02]"
+                        >
+                            <Image
+                                src={PageLoniPhoto3}
+                                alt=""
+                                class="w-[calc(825/1920*100vw)]"
+                            />
+                        </a>
+                        <Image
+                            src={TapeYellow}
+                            alt=""
+                            class="absolite absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(268/1920*100vw)] rotate-5"
+                        />
+                    </div>
+                    <Image
+                        src={PageLoniPhoto3Text}
+                        alt=""
+                        class="w-[calc(540/1920*100vw)]"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+</PageLayout>

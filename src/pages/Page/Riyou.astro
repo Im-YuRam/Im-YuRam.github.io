@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import PageLayout from "../../layouts/PageLayout.astro";
+import PageRiyouFV from "../../assets/Page/Riyou/RiyouFV.svg";
+import PageRiyouFrame from "../../assets/Page/Riyou/RiyouFrame.svg"; //なんかKenkyuuText.svgだとマーカーがバグるので注意
+---
+
+<PageLayout>
+    <section
+        class="pb-[calc(120/1920*100vw)] w-full flex justify-center items-center flex-col gap-[calc(10/1920*100vw)]"
+    >
+        <div
+            class="w-full px-[calc(156/1920*100vw)] pt-[calc(200/1920*100vw)] pb-[calc(102/1920*100vw)] flex justify-center items-center"
+        >
+            <Image src={PageRiyouFV} alt="" />
+        </div>
+        <div
+            class="w-full px-[calc(258/1920*100vw)] flex justify-center items-center"
+        >
+            <Image src={PageRiyouFrame} alt="" />
+        </div>
+    </section>
+</PageLayout>

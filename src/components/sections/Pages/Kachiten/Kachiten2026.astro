@@ -1,0 +1,84 @@
+---
+import { Image } from "astro:assets";
+
+import PageKachitenTitleText2026 from "../../../../assets/Page/Kachiten/KachitenTitleText2026.svg";
+import PageKachitenWebPhoto2026 from "../../../../assets/Page/Kachiten/KachitenWebPhoto2026.svg";
+import PageKachitenWebPhotoText2026 from "../../../../assets/Page/Kachiten/KachitenWebPhotoText2026.svg";
+import PageKachitenPhoto12026 from "../../../../assets/Page/Kachiten/KachitenPhoto12026.svg";
+import PageKachitenPhotoText12026 from "../../../../assets/Page/Kachiten/KachitenPhoto1Text2026.svg";
+import PageKachitenPhoto22026 from "../../../../assets/Page/Kachiten/KachitenPhoto22026.svg";
+import PageKachitenPhotoText22026 from "../../../../assets/Page/Kachiten/KachitenPhoto2Text2026.svg";
+import TapeYellow from "../../../../assets/Tape/TapeYellow.svg";
+---
+
+<section
+    class="w-full flex flex-col justify-center items-center gap-[calc(40/1920*100vw)]"
+>
+    <Image src={PageKachitenTitleText2026} alt="" />
+    <div
+        class="w-full flex justify-center items-center flex-col gap-[calc(160/1920*100vw)]"
+    >
+        <div class="w-full flex justify-between items-center flex-row">
+            <div class="relative w-auto">
+                <a
+                    href="https://kachiten.studio.site/"
+                    class="block w-full transition-transform duration-300 hover:scale-[1.02]"
+                >
+                    <Image
+                        src={PageKachitenWebPhoto2026}
+                        alt=""
+                        class="w-[calc(825/1920*100vw)] rotate-1"
+                    />
+                </a>
+                <Image
+                    src={TapeYellow}
+                    alt=""
+                    class="absolite absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(268/1920*100vw)] rotate-5"
+                />
+            </div>
+            <Image
+                src={PageKachitenWebPhotoText2026}
+                alt=""
+                class="w-[calc(540/1920*100vw)]"
+            />
+        </div>
+        <div class="flex w-full justify-between items-center flex-row">
+            <Image
+                src={PageKachitenPhotoText12026}
+                alt=""
+                class="w-[calc(540/1920*100vw)]"
+            />
+            <div class="relative w-auto">
+                <Image
+                    src={PageKachitenPhoto12026}
+                    alt=""
+                    class="w-[calc(825/1920*100vw)]"
+                />
+                <Image
+                    src={TapeYellow}
+                    alt=""
+                    class="absolite absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(268/1920*100vw)] -rotate-5"
+                />
+            </div>
+        </div>
+        <div class="flex w-full justify-between items-center flex-row">
+            <div class="relative w-auto">
+                <Image
+                    src={PageKachitenPhoto22026}
+                    alt=""
+                    class="w-[calc(825/1920*100vw)]"
+                />
+                <Image
+                    src={TapeYellow}
+                    alt=""
+                    class="absolite absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(268/1920*100vw)] -rotate-5"
+                />
+            </div>
+            <Image
+                src={PageKachitenPhotoText22026}
+                alt=""
+                class="w-[calc(540/1920*100vw)]"
+            />
+        </div>
+    </div>
+</section>
